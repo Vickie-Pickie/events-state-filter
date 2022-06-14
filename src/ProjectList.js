@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ProjectList extends React.Component {
   render() {
@@ -15,5 +16,13 @@ class ProjectList extends React.Component {
     );
   }
 }
+
+ProjectList.propTypes = {
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string,
+    })
+  ).isRequired,
+};
 
 export default ProjectList;

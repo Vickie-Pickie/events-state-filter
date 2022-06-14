@@ -3,7 +3,6 @@ import Toolbar from './Toolbar';
 import ProjectList from './ProjectList';
 
 class Portfolio extends React.Component {
-  static propTypes = { };
   constructor(props) {
     super(props);
     const filters = [
@@ -128,5 +127,4 @@ class Portfolio extends React.Component {
     );
   }
 }
-
 export default Portfolio;

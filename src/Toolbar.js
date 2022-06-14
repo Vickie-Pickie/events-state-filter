@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import ProjectList from "./ProjectList";
 
 class Toolbar extends React.Component {
   onFilterClick(filter) {
@@ -26,5 +28,14 @@ class Toolbar extends React.Component {
     );
   }
 }
+ProjectList.propTypes = {
+  filters: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+    })
+  ).isRequired,
+  selected: PropTypes.string.isRequired,
+  onSelectFilter: PropTypes.func.isRequired,
+};
 
 export default Toolbar;
